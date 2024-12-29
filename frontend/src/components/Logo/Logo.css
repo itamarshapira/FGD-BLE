@@ -1,0 +1,17 @@
+.tc{display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;}
+.tilt {
+    
+  
+    transform-style: preserve-3d;
+  
+   
+  }
+  #logoImage
+  {
+    width: 150px;
+    height: auto;
+  }

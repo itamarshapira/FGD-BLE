@@ -1,0 +1,82 @@
+/* Navbar container styling */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(31, 31, 31); /* Slightly brighter background */
+    color: rgb(230, 230, 230);
+    padding: 15px 20px;
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  }
+  
+  /* Bluetooth icon styling */
+  .navbar-icon {
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 26px; /* Slightly larger icon */
+    color: rgb(100, 149, 237); /* Cornflower blue color for the icon */
+    transition: color 0.3s, transform 0.3s; /* Smooth hover effect */
+  }
+  
+  .navbar-icon:hover {
+    color: rgb(30, 144, 255); /* Lighter blue on hover */
+    transform: scale(1.4); /* Slight zoom effect */
+  }
+  
+  /* Bluetooth container for icon and tooltip */
+  .bluetooth-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Tooltip styling */
+  .navbar-tooltip {
+    visibility: hidden; /* Hidden by default */
+    background-color: rgba(80, 80, 80, 0.9); /* Slight transparency */
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 6px 10px; /* Balanced padding */
+    position: absolute;
+    font-size: 12px;
+    top: 50%; /* Vertically center relative to icon */
+    left: 120%; /* Positioned to the right of the parent */
+    transform: translateY(-50%); /* Adjust for centering */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    white-space: nowrap; /* Prevent text wrapping */
+    z-index: 1000; /* Ensure it stays above other elements */
+  }
+  
+  /* Show tooltip when hovering over the Bluetooth container */
+  .bluetooth-container:hover .navbar-tooltip {
+    visibility: visible;
+    opacity: 1; /* Smooth fade-in */
+    transition: visibility 0s, opacity 0.3s ease-in-out;
+  }
+  
+  /* Battery state container */
+  .battery-state {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto; /* Push battery state to the right */
+    background-color: rgb(45, 45, 45); /* Slightly different background for contrast */
+    padding: 6px 12px; /* Add padding */
+    border-radius: 5px; /* Rounded edges */
+  }
+  
+  /* Battery icon styling */
+  .battery-icon {
+    font-size: 26px; /* Adjust size as needed */
+    color: green; /* Green for full battery */
+  }
+  
+  /* Battery percentage text styling */
+  .battery-text {
+    font-size: 16px;
+    color: white;
+    font-weight: bold; /* Bold text for emphasis */
+  }
+  
