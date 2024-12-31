@@ -1,6 +1,6 @@
 # FGD BLE Interface
 
-This project is a **Bluetooth Low Energy (BLE) interface** built using **React**. The primary goal is to connect to BLE-enabled devices, read data (like battery level), and dynamically display it in an interactive and user-friendly web interface.
+This project is a **Bluetooth Low Energy (BLE) interface** built using **React**. The primary goal is to connect to BLE-enabled devices, read data , and dynamically display it in an interactive and user-friendly web interface.
 
 ---
 
