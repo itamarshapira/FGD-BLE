@@ -9,7 +9,7 @@ import Logo from "../Logo/Logo"; // Importing the Logo component
  */
 function Tabs() {
   // State to keep track of the currently active tab (default: "Wellcome")
-  const [activeTab, setActiveTab] = useState("Wellcome");
+  const [activeTab, setActiveTab] = useState("Welcome");
 
   // Array of tabs: Each tab has a name and corresponding content
   const tabs = [
@@ -17,13 +17,25 @@ function Tabs() {
     { name: "params2", content: "Content for Params_2" },
     { name: "params3", content: "Content for Params_3" },
     {
-      name: "Wellcome",
+      name: "Welcome",
       content: (
         <div>
-          Welcome Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-          ipsam voluptate non cumque amet corporis repellat. Similique alias,
-          vel eaque, ut, soluta earum eius voluptatem quis commodi quam fuga
-          excepturi?
+          <p>
+            <h2>Welcome to Fire & Gas Detection Technologies Inc.</h2>
+          </p>
+          <p>
+            We are committed to respond to the market requirements for improved
+            performance and more reliable flame & gas detection products.
+          </p>
+          <p>
+            That includes:
+            <li>Fastest speed of response</li>
+            <li>Highest immunity to false alarms</li>
+            <li>Operation in all weather conditions</li>
+            <li>Reduced cost of ownership</li>
+            <li>Expert technical & application support</li>
+          </p>
+
           {/* Include the Logo component */}
           <Logo />
         </div>
