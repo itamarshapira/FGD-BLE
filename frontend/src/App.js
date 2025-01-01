@@ -2,6 +2,7 @@
 import './App.css';
 import Tabs from './components/Tabs/Tabs';
 import Navbar from './components/Navbar/Navbar';
+import Fotter from './components/Fotter/Fotter'
 
     
     function App() {
@@ -9,6 +10,7 @@ import Navbar from './components/Navbar/Navbar';
         <div>
           <Navbar />
           <Tabs />
+          <Fotter/>
         </div>
       );
     }
