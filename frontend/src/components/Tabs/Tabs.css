@@ -8,10 +8,11 @@
   
   /* Tab buttons container */
   .tab-buttons {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 10px;
-     
+  display: flex;
+  gap: 15px; 
+  flex-wrap: wrap; /* Tabs can wrap onto the next line when screen is smaller */
+  justify-content: center; /* Center align tabs */
+  margin-bottom: 15px;
   }
   
   /* Individual tab button */
@@ -27,7 +28,8 @@
   }
   .tab-button:hover
   {
-    transform: scale(1.1); /* Slight zoom effect */
+    transform: scale(1.2); /* Slight zoom effect */
+    transition: 0.5s;
   }
   
   /* Active tab button style */
@@ -38,10 +40,37 @@
   
   /* Tab content area */
   .tab-content {
-    padding: 20px;
-    background-color: rgb(31, 31, 31);
-    color: white;
-    width: 30%;
-    border-radius: 20px; /* Rounded corners  */
+  padding: 15px; /* Smaller padding for mobile */
+  background-color: rgb(31, 31, 31);
+  color: white;
+  width: 90%; /* Take up most of the screen width */
+  max-width: 500px; /* Limit maximum width */
+  margin: 0 auto; /* Center the content horizontally */
+  border-radius: 15px; /* Slightly smaller radius */
   }
+ 
+/* For tablets (screen width 768px and up) */
+@media (min-width: 768px) {
+  .tab-content {
+    width: 40%; /* Use 60% of the screen width */
+    padding: 25px; /* More comfortable padding for larger screens */
+    border-radius: 25px; /* Slightly larger corners */
+  }
+}
+
+/*/////////////////*/
+/* the list in Welcome tab: */
+
+ .tab-content li {
+  margin-bottom: 10px; /* Space between list items */
+  font-size: 16px; /* Default font size */
   
+}
+
+/* for screen below 600 px */
+@media (max-width: 600px) { 
+   .tab-content li {
+    font-size: 13px; /* Smaller font for smaller screens */
+    line-height: 1.4; /* Adjust line height for readability */
+  }
+}

@@ -29,6 +29,7 @@ function Tabs() {
           </p>
           <p>
             That includes:
+            <br /> <br />
             <li>Fastest speed of response</li>
             <li>Highest immunity to false alarms</li>
             <li>Operation in all weather conditions</li>
