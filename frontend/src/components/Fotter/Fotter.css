@@ -1,6 +1,12 @@
 .fotter
 {    
-    background-color: rgb(31, 31, 31);
+    /* From https://css.glass */
+background: rgba(79, 70, 70, 0.2);
+border-radius: 20px;
+
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(79, 70, 70, 0.27);
     
 
     margin-top: 10%;
