@@ -7,9 +7,11 @@ import Fotter from './components/Fotter/Fotter'
     
     function App() {
       return (
-        <div>
+        <div className='app-container'>
           <Navbar />
+          
           <Tabs />
+          
           <Fotter/>
         </div>
       );
