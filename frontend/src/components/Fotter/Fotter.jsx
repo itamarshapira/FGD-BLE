@@ -8,7 +8,7 @@ function Fotter() {
       <h1>FG-detection</h1>
       <div className="footer-social">
         <a
-          href="https://github.com/itamarshapira/smartBrain"
+          href="https://github.com/itamarshapira/FGD-ble"
           target="_blank"
           rel="noopener noreferrer"
         >
