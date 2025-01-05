@@ -20,9 +20,8 @@ function Tabs() {
       name: "Welcome",
       content: (
         <div>
-          <p>
-            <h2>Welcome to Fire & Gas Detection Technologies Inc.</h2>
-          </p>
+          <h2>Welcome to Fire & Gas Detection Technologies Inc.</h2>
+
           <p>
             We are committed to respond to the market requirements for improved
             performance and more reliable flame & gas detection products.

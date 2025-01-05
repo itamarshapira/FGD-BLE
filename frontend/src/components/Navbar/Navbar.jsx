@@ -6,6 +6,7 @@ import {
   connectToDevice,
   disconnectDevice,
   readCharacteristic,
+  readBatteryLevel,
 } from "../../services/bleService"; //* Import BLE service functions
 import "./Navbar.css"; //* Import Navbar-specific CSS for styling
 
@@ -18,6 +19,7 @@ import "./Navbar.css"; //* Import Navbar-specific CSS for styling
 function Navbar() {
   const [isConnected, setIsConnected] = useState(false); //* Track if a BLE device is connected
   const [batteryLevel, setBatteryLevel] = useState("..."); //* Track the battery level of the connected device
+  console.log(batteryLevel);
 
   /**
    * Handles Bluetooth icon clicks:
@@ -34,7 +36,7 @@ function Navbar() {
         setIsConnected(true); //* Update state to reflect successful connection
 
         // Read battery level from the BLE device
-        const level = await readCharacteristic();
+        const level = await readBatteryLevel();
         setBatteryLevel(level || "..."); //* Update battery level state
       }
     }
