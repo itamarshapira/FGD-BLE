@@ -10,8 +10,8 @@
 //const serviceId = "1b7e8251-2877-41c3-b46e-cf057c562023"; //* UUID for accessing specific BLE service
 //const receiveCharId = "8ac32d3f-5cb9-4d44-bec2-ee689169f626"; //* UUID for receiving data from the device
 //const devicePrefix = "test"; //* Prefix to filter devices during discovery
-const batteryServiceUUID = "0000180f-0000-1000-8000-00805f9b34fb"; // Proper lowercase format
-const batteryLevelCharacteristicUUID = "00002a19-0000-1000-8000-00805f9b34fb"; // Proper lowercase format
+const batteryServiceUUID = "0000180f-0000-1000-8000-00805f9b34fb"; //* 0x180F. This is the standard UUID for the Battery Service Proper lowercase format
+const batteryLevelCharacteristicUUID = "00002a19-0000-1000-8000-00805f9b34fb"; //* 0x2A19 - This is the standard UUID for the Battery Level Characteristic. Proper lowercase format
 
 let device = null; //* Variable to store connected device
 let gattServer = null; //* Variable to store GATT server instance
@@ -125,14 +125,22 @@ export function disconnectDevice() {
 // }
 //}
 
+/**
+ ** Reads the battery level from a connected BLE device.
+ *
+ * @returns {number|null} - The battery level (0-100%) if successful, or null if there's an error or no device is connected.
+ */
+
 export async function readBatteryLevel() {
   if (!gattServer) {
+    // Check if a GATT server is connected
     logMessage("No connected device. Connect first.");
     return null; // Return null if no device is connected
   }
 
   try {
     logMessage("Accessing Battery Service...");
+    // Access the Battery Service using its UUID
     const service = await gattServer.getPrimaryService(batteryServiceUUID);
     const characteristic = await service.getCharacteristic(
       batteryLevelCharacteristicUUID
