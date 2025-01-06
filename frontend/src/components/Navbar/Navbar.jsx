@@ -5,7 +5,7 @@ import { faBatteryFull } from "@fortawesome/free-solid-svg-icons"; //* Import Ba
 import {
   connectToDevice,
   disconnectDevice,
-  readCharacteristic,
+  //readCharacteristic,
   readBatteryLevel,
 } from "../../services/bleService"; //* Import BLE service functions
 import "./Navbar.css"; //* Import Navbar-specific CSS for styling

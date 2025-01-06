@@ -7,9 +7,9 @@
  */
 
 // Replace placeholders with your actual values
-const serviceId = "1b7e8251-2877-41c3-b46e-cf057c562023"; //* UUID for accessing specific BLE service
-const receiveCharId = "8ac32d3f-5cb9-4d44-bec2-ee689169f626"; //* UUID for receiving data from the device
-const devicePrefix = "test"; //* Prefix to filter devices during discovery
+//const serviceId = "1b7e8251-2877-41c3-b46e-cf057c562023"; //* UUID for accessing specific BLE service
+//const receiveCharId = "8ac32d3f-5cb9-4d44-bec2-ee689169f626"; //* UUID for receiving data from the device
+//const devicePrefix = "test"; //* Prefix to filter devices during discovery
 const batteryServiceUUID = "0000180f-0000-1000-8000-00805f9b34fb"; // Proper lowercase format
 const batteryLevelCharacteristicUUID = "00002a19-0000-1000-8000-00805f9b34fb"; // Proper lowercase format
 
@@ -98,31 +98,32 @@ export function disconnectDevice() {
  * Reads data from a BLE characteristic.
  * - Assumes device is connected and GATT server is available.
  */
-export async function readCharacteristic() {
-  // if (!gattServer) {
-  //   logMessage("No connected device. Connect first.");
-  //   return;
-  // }
-  // try {
-  //   // Get the Battery Service
-  //   const service = await gattServer.getPrimaryService(
-  //     "0000180F-0000-1000-8000-00805f9b34fb"
-  //   );
-  //   // Get the Battery Level Characteristic
-  //   const characteristic = await service.getCharacteristic(
-  //     "00002A19-0000-1000-8000-00805f9b34fb"
-  //   );
-  //   // Read the characteristic's value
-  //   const value = await characteristic.readValue();
-  //   // Decode the value (assuming UTF-8 text)
-  //   const decoder = new TextDecoder("utf-8");
-  //   const data = decoder.decode(value);
-  //   logMessage(`Received Data: ${data}`);
-  //   return data;
-  // } catch (error) {
-  //   logMessage(`Error reading characteristic: ${error.message}`);
-  // }
-}
+
+//export async function readCharacteristic() {
+// if (!gattServer) {
+//   logMessage("No connected device. Connect first.");
+//   return;
+// }
+// try {
+//   // Get the Battery Service
+//   const service = await gattServer.getPrimaryService(
+//     "0000180F-0000-1000-8000-00805f9b34fb"
+//   );
+//   // Get the Battery Level Characteristic
+//   const characteristic = await service.getCharacteristic(
+//     "00002A19-0000-1000-8000-00805f9b34fb"
+//   );
+//   // Read the characteristic's value
+//   const value = await characteristic.readValue();
+//   // Decode the value (assuming UTF-8 text)
+//   const decoder = new TextDecoder("utf-8");
+//   const data = decoder.decode(value);
+//   logMessage(`Received Data: ${data}`);
+//   return data;
+// } catch (error) {
+//   logMessage(`Error reading characteristic: ${error.message}`);
+// }
+//}
 
 export async function readBatteryLevel() {
   if (!gattServer) {
